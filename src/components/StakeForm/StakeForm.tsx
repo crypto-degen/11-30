@@ -9,7 +9,7 @@ import { FarmContextProvider } from './context'
 
 import { Summary } from './Summary'
 import { Details } from './Details'
-import { useAppContext } from '../../context/app'
+// import { useAppContext } from '../../context/app'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -42,7 +42,7 @@ export const StakeForm: React.FC<StakeFormProps> = ({
   totalValueLocked = 0,
   depositedAmount = 0,
 }) => {
-  const { token } = useAppContext()
+  // const { token } = useAppContext()
   const cl = useStyles({ disabled })
   
   const value = {

@@ -4,12 +4,13 @@ import {
   makeStyles,
 } from '@material-ui/core'
 
-import { Nav } from '../../../Nav'
+// import { Nav } from '../../../Nav'
 import { WalletConnectButton } from '../../../WalletConnect'
 
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
+    minHeight: 72,
     justifyContent: 'space-between',
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
@@ -22,7 +23,7 @@ export const Header: React.FC = () => {
   return (
     <Container maxWidth="lg" className={cl.root}>
       <div></div>
-      <Nav.Horizontal />
+      {/* <Nav.Horizontal /> */}
       <WalletConnectButton />
     </Container>
   )

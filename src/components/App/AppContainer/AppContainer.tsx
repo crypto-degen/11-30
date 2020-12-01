@@ -9,10 +9,12 @@ import { ERC20Util } from '../../../util/erc20'
 
 import { Header } from './Header'
 import { Footer } from './Footer'
+import { Background } from './Background'
 import { WalletModal } from '../../WalletConnect/Modal'
 
 const useStyles = makeStyles(theme => ({
   root: {
+    filter: 'hue-rotate(45deg)',
     display: 'flex',
     flexDirection: 'column',
     minHeight: '100vh',
@@ -38,9 +40,11 @@ export const AppContainer: React.FC = ({ children }) => {
   return (
     <div className={cl.root}>
       <WalletModal />
-      <Header />
-      {children}
-      <Footer />
+      <Background>
+        <Header />
+        {children}
+        <Footer />
+      </Background>
     </div>  
   )
 }
