@@ -156,7 +156,7 @@ const Home: React.FC = () => {
         
         <Grid item xs={12} md={6}>
           <StatCard title={`Your ${token.symbol} balance`}>
-            {wallet.isConnected ? token.balance : <LockIcon style={{ fontSize: 64, marginTop: 16 }} />}
+            {wallet.isConnected ? token.balance : <LockIcon style={{ fontSize: 64, marginTop: 12 }} />}
           </StatCard>
           {/* <Typography variant="h4" className={cl.header}>
             The <span className="colored">"what"</span>
