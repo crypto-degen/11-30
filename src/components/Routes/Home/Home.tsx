@@ -12,7 +12,7 @@ import { useAppContext } from '../../../context/app'
 
 import { Logo } from '../../Logo'
 import { Section } from '../../Containers'
-import { TitledCard } from '../../Cards'
+import { TitledCard, StatCard } from '../../Cards'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -132,7 +132,7 @@ const useStyles = makeStyles(theme => ({
       cursor: 'pointer',
       transform: 'translateY(-10px)',
     },
-  }
+  },
 }))
 
 const Home: React.FC = () => {
@@ -151,7 +151,10 @@ const Home: React.FC = () => {
         <div className={cl.slantUpBottom} />
         
         <Grid item xs={12} md={6}>
-          <Typography variant="h4" className={cl.header}>
+          <StatCard title={`Your ${token.symbol} balance`}>
+            {token.balance}
+          </StatCard>
+          {/* <Typography variant="h4" className={cl.header}>
             The <span className="colored">"what"</span>
           </Typography>
           <Typography variant="body1" className={cl.body}>
@@ -159,11 +162,14 @@ const Home: React.FC = () => {
             <br/>
             <br/>
             Through its synergistic mechanisms, the {token.name} ecosystem aims to create interchangeable parity with {token.symbol}, through which holders will generate profit.
-          </Typography>
+          </Typography> */}
         </Grid>
 
         <Grid item xs={12} md={6}>
-          <Typography variant="h4" className={cl.header}>
+          <StatCard title={`${token.symbol} supply`}>
+            {token.totalSupply}
+          </StatCard>
+          {/* <Typography variant="h4" className={cl.header}>
             The <span className="colored">"how"</span>
           </Typography>
           <Typography variant="body1" className={cl.body}>
@@ -172,7 +178,7 @@ const Home: React.FC = () => {
             <br />
             Another yield generating mechanism will come from deploying farming pools with different token pairs.
             This should continuously generate yields for stakers and farmers in a non-inflationary way. No additional {token.symbol} will be ever minted.
-          </Typography>
+          </Typography> */}
         </Grid>
       </Section>
       <Section sectionCl={cl.section2}>
@@ -208,7 +214,7 @@ const Home: React.FC = () => {
           
           <Grid item xs={12} container justify="center">
             <Grid item xs={12} md={4} className={cl.roadmapItem}>
-              <TitledCard title="November 19, 2020" variant={2}>
+              <TitledCard title="December 1, 2020" variant={2}>
                 - Launch website
                 <br />
                 - List {token.symbol} on Uniswap
@@ -222,8 +228,8 @@ const Home: React.FC = () => {
             </Grid>
 
             <Grid item xs={12} md={4} className={cl.roadmapItem}>
-              <TitledCard title="November 20, 2020" variant={2}>
-                - Release wUSD
+              <TitledCard title="December 2, 2020" variant={2}>
+                - Begin liquidity partnership
                 <br />
                 - Open up staking to holders
                 <br />
@@ -235,7 +241,7 @@ const Home: React.FC = () => {
             </Grid>
 
             <Grid item xs={12} md={4} className={cl.roadmapItem}>
-              <TitledCard title="November 21, 2020" variant={2}>
+              <TitledCard title="December 3, 2020" variant={2}>
                 - Begin marketing campaign
                 <br />
                 - Apply for Coingecko listing*
@@ -250,10 +256,8 @@ const Home: React.FC = () => {
             </Grid>
 
             <Grid item xs={12} md={4} className={cl.roadmapItem}>
-              <TitledCard title="November 22, 2020" variant={2}>
+              <TitledCard title="December 4, 2020" variant={2}>
                 - Open first farming pool
-                <br />
-                - Begin maintenance of wUSD
               </TitledCard>
             </Grid>
 
