@@ -11,6 +11,7 @@ const useStyles = makeStyles(theme => ({
     borderRadius: '20px',
     border: `5px solid ${theme.palette.primary.main}`,
     boxShadow: '8px 8px 0 black',
+    height: '100%',
   },
   
   header: {

@@ -13,6 +13,9 @@ import { useAppContext } from '../../../context/app'
 import { Logo } from '../../Logo'
 import { Section } from '../../Containers'
 import { TitledCard, StatCard } from '../../Cards'
+import { useWallet } from '../../../hooks/useWallet';
+
+import LockIcon from '@material-ui/icons/Lock';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -138,6 +141,7 @@ const useStyles = makeStyles(theme => ({
 const Home: React.FC = () => {
   const cl = useStyles()
   const { token } = useAppContext()
+  const wallet = useWallet()
   
   return (
     <>
@@ -152,7 +156,7 @@ const Home: React.FC = () => {
         
         <Grid item xs={12} md={6}>
           <StatCard title={`Your ${token.symbol} balance`}>
-            {token.balance}
+            {wallet.isConnected ? token.balance : <LockIcon style={{ fontSize: 64, marginTop: 16 }} />}
           </StatCard>
           {/* <Typography variant="h4" className={cl.header}>
             The <span className="colored">"what"</span>
