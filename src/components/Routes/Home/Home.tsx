@@ -210,7 +210,7 @@ const Home: React.FC = () => {
           
           <Grid item xs={12} container justify="center">
             <Grid item xs={12} md={4} className={cl.roadmapItem}>
-              <TitledCard title="December 1, 2020" variant={2}>
+              <TitledCard title="December 2, 2020" variant={2}>
                 - Launch website
                 <br />
                 - List {token.symbol} on Uniswap
@@ -224,7 +224,7 @@ const Home: React.FC = () => {
             </Grid>
 
             <Grid item xs={12} md={4} className={cl.roadmapItem}>
-              <TitledCard title="December 2, 2020" variant={2}>
+              <TitledCard title="December 3, 2020" variant={2}>
                 - Begin liquidity partnership
                 <br />
                 - Voting begins
@@ -239,7 +239,7 @@ const Home: React.FC = () => {
             </Grid>
 
             <Grid item xs={12} md={4} className={cl.roadmapItem}>
-              <TitledCard title="December 3, 2020" variant={2}>
+              <TitledCard title="December 4, 2020" variant={2}>
                 - Begin marketing campaign
                 <br />
                 - Apply for Coingecko listing*
@@ -254,7 +254,7 @@ const Home: React.FC = () => {
             </Grid>
 
             <Grid item xs={12} md={4} className={cl.roadmapItem}>
-              <TitledCard title="December 4, 2020" variant={2}>
+              <TitledCard title="December 5, 2020" variant={2}>
                 - Open first farming pool (voted on by the community)
               </TitledCard>
             </Grid>
