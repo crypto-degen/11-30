@@ -3,6 +3,8 @@ import React, { useReducer } from 'react'
 import { createContextWithDefault } from '../util'
 import { Token } from '../types'
 
+import Logo from '../img/hild_logo.jpg'
+
 interface State {
   walletModalIsOpen: boolean
   token: Token
@@ -46,10 +48,10 @@ const AppContextProvider: React.FC = ({ children }) => {
   const [state, dispatchAppAction] = useReducer(reducer, {
     walletModalIsOpen: false,
     token: {
-      name: 'Token Name',
-      symbol: 'TIKR',
-      address: '0x26ce25148832c04f3d7f26f32478a9fe55197166',
-      logo: '',
+      name: 'Hinterland',
+      symbol: 'HILD',
+      address: '0x484b09e45d2e388b63b3ae69beeeb767780cb407',
+      logo: Logo,
 
       balance: -1,
       totalSupply: 10000,
@@ -58,16 +60,16 @@ const AppContextProvider: React.FC = ({ children }) => {
       links: {
         contract: '',
         unicrypt: '',
-        dextools: '',
+        dextools: 'https://www.dextools.io/app/uniswap/pair-explorer/0x203f202a64f3c6dd6e0fc82214f97a52ddfea113',
 
         uniswap: {
-          info: '',
-          buy: '',
-          liquidity: '',
+          info: 'https://info.uniswap.org/token/0x484b09e45d2e388b63b3ae69beeeb767780cb407',
+          buy: 'https://app.uniswap.org/#/swap?outputCurrency=0x484b09e45d2e388b63b3ae69beeeb767780cb407',
+          liquidity: 'https://app.uniswap.org/#/add/0x484b09e45d2e388b63b3ae69beeeb767780cb407/ETH',
         },
 
         social: {
-          telegram: '',
+          telegram: 'https://t.me/HinterlandDAO',
           twitter: '',
           medium: '',
           discord: '',
