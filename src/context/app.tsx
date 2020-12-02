@@ -52,8 +52,8 @@ const AppContextProvider: React.FC = ({ children }) => {
       logo: '',
 
       balance: -1,
-      totalSupply: -1,
-      circulatingSupply: -1,
+      totalSupply: 10000,
+      circulatingSupply: 10000,
 
       links: {
         contract: '',

@@ -158,53 +158,45 @@ const Home: React.FC = () => {
           <StatCard title={`Your ${token.symbol} balance`}>
             {wallet.isConnected ? token.balance : <LockIcon style={{ fontSize: 64, marginTop: 12 }} />}
           </StatCard>
-          {/* <Typography variant="h4" className={cl.header}>
-            The <span className="colored">"what"</span>
-          </Typography>
-          <Typography variant="body1" className={cl.body}>
-            {token.name} ecosystem is a new Defi platform that aims to generate passive income, without the consequential deflation that often occurs in similar projects. This is achieved through the anti-deflationary system that {token.name} is equipped with, along with the staking rewards provided with the native reward token, {token.symbol}.
-            <br/>
-            <br/>
-            Through its synergistic mechanisms, the {token.name} ecosystem aims to create interchangeable parity with {token.symbol}, through which holders will generate profit.
-          </Typography> */}
         </Grid>
 
         <Grid item xs={12} md={6}>
           <StatCard title={`${token.symbol} supply`}>
-            {token.totalSupply}
+            {token.totalSupply.toLocaleString()}
           </StatCard>
-          {/* <Typography variant="h4" className={cl.header}>
-            The <span className="colored">"how"</span>
-          </Typography>
-          <Typography variant="body1" className={cl.body}>
-            {token.name} holders will be able to stake or farm their tokens in pools with different lock-up periods. Although we will have a lock-up periods, stakers will still be able to withdraw their tokens at any time for a penalty fee, which will be paid to stakers and farmers.
-            <br />
-            <br />
-            Another yield generating mechanism will come from deploying farming pools with different token pairs.
-            This should continuously generate yields for stakers and farmers in a non-inflationary way. No additional {token.symbol} will be ever minted.
-          </Typography> */}
         </Grid>
       </Section>
       <Section sectionCl={cl.section2}>
         <Grid item xs={12}>
           <Typography variant="h3" className={cl.whiteHeader}>
-            Introducing: <span className="colored">wUSD</span>
+            Introducing: <span className="colored">{token.symbol}</span>
           </Typography>
           <Typography variant="body1" className={cl.body} style={{color: 'white'}}>
-            We have many initiatives planned outside the realm of traditional farming and staking. The first of these is our very own stablecoin: $wUSD.
-            <br />
-            <br />
-            wUSD will be our first addition to the {token.name} ecosystem. Our staking and farming pools will also reward additional APY in the form of wUSD. Upon its release, wUSD will be constantly rebased to $1 USD.
+            {token.name} is a decentralized finance (DeFi) project developed by an independent team of developers who seek to bring innovation to the emerging market. {token.symbol} provides superbly profitable services based on what the community desires; your voice helps steer the ship across the seas of decentralized finance.
           </Typography>
         </Grid>
-        <Grid item xs={12} md={6} style={{display: 'flex'}}>
-          <TitledCard title="Rebased">
-            wUSD will be constantly rebased to $1 USD upon release. Any arbitrage profit as a result of the rebasing will be put into liquidity.
+        <Grid item xs={12} md={4} style={{display: 'flex'}}>
+          <TitledCard title="Why">
+            Rather than depending on a traditional hierarchy of staff and independent contributors, {token.name} run democratically and collectively as a group.
+            <br />
+            <br />
+            A staking app, a voting app and a rewards app are the three main elements of the {token.name} ecosystem, with each app interconnecting and communicating with each other via theEthereum platform.
           </TitledCard>
         </Grid>
-        <Grid item xs={12} md={6}>
-          <TitledCard title="Rewards">
-            wUSD will be used to as an additional reward incentive for both staking and farming. Eventually we will offer a pool to farm wUSD outright.
+        <Grid item xs={12} md={4} style={{display: 'flex'}}>
+          <TitledCard title="How">
+            The community participates in {token.name} via {token.symbol} tokens. Those who stake {token.symbol} tokens will be given the right to vote on a plethora of different improvement proposals, ranging from strategic propositions to more complex and technically focused ideas.
+            <br />
+            <br />
+            There will be no minimum amount that someone needs to stake in order to vote, meaning the barrier to entry is virtually zero. Your voting power is only limited by the number of {token.symbol} you own.
+          </TitledCard>
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <TitledCard title="Who">
+            We are a team of developers passionate about bringing a fair and profitable application to the community.
+            <br />
+            <br />
+            Currently we have chosen to remain anonymous, but eventually that may change.
           </TitledCard>
         </Grid>
       </Section>
@@ -235,6 +227,8 @@ const Home: React.FC = () => {
               <TitledCard title="December 2, 2020" variant={2}>
                 - Begin liquidity partnership
                 <br />
+                - Voting begins
+                <br />
                 - Open up staking to holders
                 <br />
               </TitledCard>
@@ -261,7 +255,7 @@ const Home: React.FC = () => {
 
             <Grid item xs={12} md={4} className={cl.roadmapItem}>
               <TitledCard title="December 4, 2020" variant={2}>
-                - Open first farming pool
+                - Open first farming pool (voted on by the community)
               </TitledCard>
             </Grid>
 

@@ -12,6 +12,7 @@ const useStyles = makeStyles(theme => ({
     borderRadius: '20px',
     border: (p: any) => p.variant === 1 ? `5px solid ${theme.palette.primary.main}` : `5px solid ${theme.palette.secondary.main}`,
     boxShadow: '8px 8px 0 black',
+    height: '100%',
   },
   
   divider: {

@@ -33,8 +33,8 @@ export const AppContainer: React.FC = ({ children }) => {
     const balance = await ERC20Util.fetchBalance(wallet, token.address)
     dispatchAppAction({ tag: 'TokenBalance.Update', balance })
 
-    const totalSupply = await ERC20Util.fetchTotalSupply(wallet.ethereum, token.address)
-    dispatchAppAction({ tag: 'TokenTotalSupply.Update', totalSupply })
+    // const totalSupply = await ERC20Util.fetchTotalSupply(wallet.ethereum, token.address)
+    // dispatchAppAction({ tag: 'TokenTotalSupply.Update', totalSupply })
   }, 2000)
 
   return (
