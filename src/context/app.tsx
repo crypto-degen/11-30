@@ -59,7 +59,7 @@ const AppContextProvider: React.FC = ({ children }) => {
 
       links: {
         contract: 'https://etherscan.io/address/0x484b09e45d2e388b63b3ae69beeeb767780cb407',
-        unicrypt: '',
+        unicrypt: 'https://v2.unicrypt.network/pair/0x203f202a64f3c6dd6e0fc82214f97a52ddfea113',
         dextools: 'https://www.dextools.io/app/uniswap/pair-explorer/0x203f202a64f3c6dd6e0fc82214f97a52ddfea113',
 
         uniswap: {
