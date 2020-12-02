@@ -177,7 +177,7 @@ const Home: React.FC = () => {
         </Grid>
         <Grid item xs={12} md={4} style={{display: 'flex'}}>
           <TitledCard title="Why">
-            Rather than depending on a traditional hierarchy of staff and independent contributors, {token.name} run democratically and collectively as a group.
+            Rather than depending on a traditional hierarchy of staff and independent contributors, {token.name} runs democratically and collectively as a group.
             <br />
             <br />
             A staking app, a voting app and a rewards app are the three main elements of the {token.name} ecosystem, with each app interconnecting and communicating with each other via theEthereum platform.
